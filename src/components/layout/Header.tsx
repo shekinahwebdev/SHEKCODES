@@ -6,7 +6,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const navigationLinks = [
     { name: "Home", location: "/" },
@@ -43,7 +43,7 @@ const Header = () => {
           className="lg:hidden bg-linear-to-t from-very-dark to-semi-opaque-blue p-1  mt-2 lg:mt-0"
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <HiOutlineMenu size={30} /> : <BiX size={30} />}
+          {!isOpen ? <HiOutlineMenu size={30} /> : <BiX size={30} />}
         </button>
         <Button
           variant="gradient"
@@ -54,14 +54,14 @@ const Header = () => {
       </div>
 
       <AnimatePresence>
-        {!isOpen && (
+        {isOpen && (
           <motion.div
-            initial={{ y: "-100%", opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: "-100%", opacity: 0 }}
+            initial={{ y: "-100%" }}
+            animate={{ y: 0 }}
+            exit={{ y: "-100%" }}
             transition={{
-              duration: 0.6,
-              ease: [0.22, 1, 0.36, 1],
+              duration: 0.5,
+              ease: [0.4, 0, 0.2, 1],
             }}
             className="md:hidden bg-ui-background absolute w-full z-9999 border-2 border-semi-opaque-blue py-6 rounded-bl-full rounded-br-full"
           >
@@ -70,7 +70,7 @@ const Header = () => {
                 className="lg:hidden bg-linear-to-t from-very-dark to-semi-opaque-blue p-1"
                 onClick={() => setIsOpen(!isOpen)}
               >
-                {isOpen ? <HiOutlineMenu size={30} /> : <BiX size={30} />}
+                {!isOpen ? <HiOutlineMenu size={30} /> : <BiX size={30} />}
               </button>
               {navigationLinks.map((link) => (
                 <Link
