@@ -3,7 +3,7 @@ import { BiX } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -53,35 +53,41 @@ const Header = () => {
         </Button>
       </div>
 
-      {!isOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: "-50px" }}
-          animate={{ opacity: 1, y: "0px" }}
-          transition={{ delay: 0, duration: 1.5, ease: "easeOut" }}
-          className="md:hidden bg-ui-background absolute w-full z-9999 border-2 border-semi-opaque-blue py-6 rounded-bl-full rounded-br-full"
-        >
-          <div className="flex text-white flex-col items-center w-full px-4 py-4 space-y-4">
-            <button
-              className="lg:hidden bg-linear-to-t from-very-dark to-semi-opaque-blue p-1"
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              {isOpen ? <HiOutlineMenu size={30} /> : <BiX size={30} />}
-            </button>
-            {navigationLinks.map((link) => (
-              <Link
-                to={link.location}
-                key={link.name}
-                className="hover:text-white"
+      <AnimatePresence>
+        {!isOpen && (
+          <motion.div
+            initial={{ y: "-100%", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: "-100%", opacity: 0 }}
+            transition={{
+              duration: 0.6,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="md:hidden bg-ui-background absolute w-full z-9999 border-2 border-semi-opaque-blue py-6 rounded-bl-full rounded-br-full"
+          >
+            <div className="flex text-white flex-col items-center w-full px-4 py-4 space-y-4">
+              <button
+                className="lg:hidden bg-linear-to-t from-very-dark to-semi-opaque-blue p-1"
+                onClick={() => setIsOpen(!isOpen)}
               >
-                <div className="relative inline-block group pb-2">
-                  {link.name}
-                  <span className="absolute w-full left-0 bottom-0 h-1 bg-[linear-gradient(to_right,#143296cc_0%,#143296cc_50%,#ffffff_50%,#ffffff_100%)] transition-all duration-300"></span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </motion.div>
-      )}
+                {isOpen ? <HiOutlineMenu size={30} /> : <BiX size={30} />}
+              </button>
+              {navigationLinks.map((link) => (
+                <Link
+                  to={link.location}
+                  key={link.name}
+                  className="hover:text-white"
+                >
+                  <div className="relative inline-block group pb-2">
+                    {link.name}
+                    <span className="absolute w-full left-0 bottom-0 h-1 bg-[linear-gradient(to_right,#143296cc_0%,#143296cc_50%,#ffffff_50%,#ffffff_100%)] transition-all duration-300"></span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };
