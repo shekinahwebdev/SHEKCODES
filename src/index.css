@@ -11,10 +11,10 @@
 
 @theme {
   --color-very-dark: #00000a;
-  --color-semi-opaque-blue: rgba(20, 50, 150, 0.8);
-  --color-semi-opaque-very-dark-blue: rgba(0, 0, 50, 0.5);
+  --color-semi-opaque-blue: #143296cc;
+  --color-semi-opaque-very-dark-blue: #00003280;
   --color-ui-background: #060010;
-  --color-text: rgb(122, 122, 122);
+  --color-text: #7a7a7a;
   --color-radius: 0.5rem;
 }
 
@@ -22,7 +22,7 @@ body {
   background-color: #060010;
   min-height: 100vh;
   font-size: 16px;
-  color: white;
+  color: #ffffff;
 }
 
 * {
