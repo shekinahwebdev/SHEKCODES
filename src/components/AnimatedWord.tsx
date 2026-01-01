@@ -29,6 +29,7 @@ const container = {
     },
   },
 };
+const smoothEase: [number, number, number, number] = [0.22, 1, 0.36, 1];
 const letter = {
   hidden: {
     opacity: 0,
@@ -41,7 +42,7 @@ const letter = {
     filter: "blur(0px)",
     transition: {
       duration: 0.9,
-      ease: [0.22, 1, 0.36, 1],
+      ease: smoothEase,
     },
   },
 };
