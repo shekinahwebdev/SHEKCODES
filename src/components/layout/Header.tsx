@@ -16,7 +16,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="border-b-2 border-semi-opaque-blue relative top-0 w-full px-3 py-2 md:px-10 lg:px-20 flex md:flex-row flex-col justify-between items-center">
+    <header className="border-b-2 border-semi-opaque-blue relative top-0 w-full px-3 py-4 md:px-10 lg:px-20 flex md:flex-row flex-col justify-between items-center">
       <div className="mt-4 md:mt-0">
         <div></div>
         <p className="text-xl">ShekCodes</p>
@@ -63,7 +63,26 @@ const Header = () => {
               duration: 0.5,
               ease: [0.4, 0, 0.2, 1],
             }}
-            className="md:hidden bg-ui-background absolute w-full z-9999 border-2 border-semi-opaque-blue py-6 rounded-bl-full rounded-br-full"
+            className="
+            lg:hidden 
+            bg-ui-background 
+            absolute 
+            top-0 left-0
+            w-full
+            z-9999
+            border border-semi-opaque-blue
+            py-6
+          
+            /* Mobile shape */
+            rounded-bl-full rounded-br-full
+          
+            /* Tablet shape */
+            md:top-22
+            md:left-1/2 md:-translate-x-1/2
+            md:w-[85%]
+            md:rounded-2xl
+            md:shadow-xl
+          "
           >
             <div className="flex text-white flex-col items-center w-full px-4 py-4 space-y-4">
               <button
