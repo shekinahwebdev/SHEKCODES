@@ -39,22 +39,6 @@ body {
   }
 }
 
-@layer utilities {
-  .animated-gradient {
-    background-size: 200% auto;
-    animation: gradient-move 3s linear infinite;
-  }
-
-  @keyframes gradient-move {
-    0% {
-      background-position: 0% center;
-    }
-    100% {
-      background-position: 200% center;
-    }
-  }
-}
-
 .get-started-button::before {
   content: "";
   border-radius: inherit;
@@ -100,7 +84,8 @@ body {
 
 .hero-text {
   display: flex;
-  font-size: clamp(2rem, 18vw, 20rem);
+  text-align: center;
+  font-size: clamp(2rem, 17vw, 20rem);
   font-weight: 800;
   letter-spacing: -0.04em;
   line-height: 0.9;
