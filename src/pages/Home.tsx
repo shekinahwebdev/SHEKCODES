@@ -56,7 +56,7 @@ const Home = () => {
               </div>
               <span
                 style={desAnimation}
-                className="text-[15px] md:text-[18px] bg-gradient-to-r from-white via-indigo-300 to-white bg-clip-text text-transparent animated-gradient font-medium"
+                className="text-[15px] md:text-[18px] bg-linear-to-r from-white via-indigo-300 to-white bg-clip-text text-transparent animated-gradient font-medium"
               >
                 is more than colors and code, it's the art of thinking deeply,
                 exploring ideas from multiple perspectives, solving problems

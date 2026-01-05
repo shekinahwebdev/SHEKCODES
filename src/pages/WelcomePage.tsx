@@ -8,7 +8,7 @@ const WelcomePage = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeInOut" }}
-      className="w-full h-screen z-0 relative"
+      className="w-full h-screen z-0 relative flex flex-col items-center justify-center"
     >
       <Orb
         hoverIntensity={2}
@@ -16,7 +16,7 @@ const WelcomePage = () => {
         hue={0}
         forceHoverState={false}
       />
-      <AnimatedWord text="SHEKCODE" />
+      <AnimatedWord text="SHEKCODES" />
     </motion.div>
   );
 };
