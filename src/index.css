@@ -84,7 +84,8 @@ body {
 
 .hero-text {
   display: flex;
-  font-size: clamp(2rem, 18vw, 14rem);
+  text-align: center;
+  font-size: clamp(2rem, 17vw, 20rem);
   font-weight: 800;
   letter-spacing: -0.04em;
   line-height: 0.9;

@@ -16,7 +16,7 @@ const WelcomePage = () => {
         hue={0}
         forceHoverState={false}
       />
-      <AnimatedWord text="SHEKCODES" />
+      <AnimatedWord text="SHEKCODE" />
     </motion.div>
   );
 };
