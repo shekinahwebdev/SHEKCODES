@@ -27,7 +27,7 @@ const AnimationQuote = ({ text }: any) => {
 
   return (
     <motion.div
-      className="flex flex-wrap flex-center"
+      className="flex flex-wrap flex-center justify-center items-center lg:max-w-3xl"
       variants={container}
       initial="hidden"
       animate="visible"
@@ -35,7 +35,7 @@ const AnimationQuote = ({ text }: any) => {
       {words.map((word: any, index: any) => (
         <motion.span
           key={index}
-          className="inline-block mr-2"
+          className="inline-block mr-2 text-center"
           variants={wordVariant}
         >
           {word}

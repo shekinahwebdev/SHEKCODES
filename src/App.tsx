@@ -3,6 +3,7 @@ import Header from "./components/layout/Header";
 import { useEffect, useState } from "react";
 import WelcomePage from "./pages/WelcomePage";
 import { AnimatePresence, motion } from "framer-motion";
+import Snowfall from "react-snowfall";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -18,7 +19,7 @@ const App = () => {
     const timer = setTimeout(() => {
       setLoading(false);
       sessionStorage.setItem("visited", "true");
-    }, 100000);
+    }, 9000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -38,6 +39,19 @@ const App = () => {
               className="w-full flex flex-col justify-center items-center z-0 relative"
             >
               <main>
+                <Snowfall
+                  snowflakeCount={120}
+                  speed={[0.5, 1.5]}
+                  wind={[-0.2, 0.5]}
+                  radius={[0.5, 2.5]}
+                  style={{
+                    position: "fixed",
+                    width: "100vw",
+                    height: "100vh",
+                    zIndex: 30,
+                    pointerEvents: "none",
+                  }}
+                />
                 <Outlet />
               </main>
             </motion.div>
