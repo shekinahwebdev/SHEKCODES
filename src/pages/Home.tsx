@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import AnimationQuote from "@/components/AnimationQuote";
+import HeroExperience from "@/components/Models/HeroExperience";
 const words = [
   "Creativity",
   "Innovation",
@@ -33,10 +34,9 @@ const Home = () => {
   }, []);
   return (
     <section className="px-3 md:px-5">
-      <header className="py-6 md:py-7 lg:py-10 flex flex-col">
-        {/* <header className="py-16 lg:py-24 flex flex-col"> */}
-        <div className="flex flex-col lg:flex-row gap-4">
-          <div className="overflow-hidden max-w-3xl md:max-w-5xl py-2 flex-col items-center lg:py-4">
+      <header className="py-6 md:py-7 flex flex-col">
+        <div className="relative flex flex-col lg:flex-row items-center gap-6 lg:gap-12">
+          <div className="overflow-hidden max-w-3xl md:max-w-5xl py-2 flex-col items-center lg:py-4 px-3">
             <h1 className="text-md md:text-xl leading-relaxed max-w-3xl">
               <div className="relative md:h-15 lg:h-14 h-10 overflow-hidden">
                 <AnimatePresence mode="wait">
@@ -67,29 +67,22 @@ const Home = () => {
                 ideas into intuitive interfaces.
               </span>
             </h1>
-            <h1 className="hidden pt-8 lg:flex md:text-2xl font-bold text-white leading-tight">
-              Hello, I'm Patricia a,
-            </h1>
           </div>
-          <div className="py-3 my-2">
-            <div className="w-full 3d-animate max-w-125 lg:max-w-200 bg-semi-opaque-very-dark-blue">
-              <img
-                src="/assets/portfolio_image/shekcodes.png"
-                className="w-full max-w-100"
-              />
+          <figure className="w-full lg:w-1/2 flex justify-center">
+            <div className="hero-3d-layout">
+              <HeroExperience />
             </div>
-          </div>
+          </figure>
         </div>
-        {/* <div className="text-center lg:ml-3 my-5 py-3 flex flex-col items-center border-2"> */}
-        <div className="max-w-3xl w-full space-y-4 text-center my-8">
-          <h1 className="text-2xl lg:hidden md:text-2xl font-bold leading-tight">
-            Hello, I'm Patricia a,
+        <div className="max-w-3xl w-full space-y-4 text-center lg:text-left my-8">
+          <h1 className="text-2xl md:text-2xl font-bold leading-tight">
+            Hello, I'm Patricia,
           </h1>
-          <h1 className="font-header-style lg:text-left mb-5 font-extrabold text-3xl md:text-4xl lg:text-5xl">
+          <h1 className="font-header-style lg:text-left mb-5 font-extrabold text-3xl md:text-4xl lg:text-6xl">
             Frontend Developer
           </h1>
         </div>
-        <div className="lg:max-w-7xl w-full flex flex-col justify-center items-center text-white my-2 lg:my-8 lg:px-5">
+        <div className="lg:max-w-7xl w-full flex flex-col justify-center items-center text-white my-2 lg:px-3">
           <AnimationQuote text={quote} />
           <Button className=" border-semi-opaque-blue py-6 px-5 bg-linear-to-t from-semi-opaque-blue to-very-dark my-5 border-2">
             Need a site?

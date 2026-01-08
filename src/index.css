@@ -36,6 +36,16 @@ body {
   .font-header-style {
     font-family: "JetBrains Mono", monospace;
   }
+  .hero-3d-layout {
+    @apply w-full max-w-[700px] aspect-[16/12] sm:aspect-[16/10] lg:aspect-[10/9]
+           flex items-center justify-center;
+  }
+}
+
+.hero-3d-layout canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
 }
 
 .get-started-button::before {
