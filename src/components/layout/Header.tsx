@@ -19,7 +19,7 @@ const Header = () => {
     <header className="border-b-2 border-semi-opaque-blue relative top-0 w-full px-3 py-4 md:px-10 lg:px-20 flex md:flex-row flex-col justify-between items-center">
       <div className="mt-4 md:mt-0">
         <div></div>
-        <p className="text-xl">ShekCodes</p>
+        <p className="text-2xl">ShekCodes</p>
       </div>
 
       <nav className="hidden lg:flex items-center justify-items">
