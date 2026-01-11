@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const AnimationQuote = ({ text }: any) => {
   // Split sentence into words
-  const words = text.split(" ");
+  const words = text.split("");
   const smoothEase: [number, number, number, number] = [0.4, 0, 0.2, 1];
 
   // Parent container variant to control stagger
@@ -17,7 +17,7 @@ const AnimationQuote = ({ text }: any) => {
 
   // Each word animation
   const wordVariant = {
-    hidden: { x: -50, opacity: 0 },
+    hidden: { x: "100%", opacity: 0 },
     visible: {
       x: 0,
       opacity: 1,
@@ -32,15 +32,20 @@ const AnimationQuote = ({ text }: any) => {
       initial="hidden"
       animate="visible"
     >
-      {words.map((word: any, index: any) => (
-        <motion.span
-          key={index}
-          className="inline-block mr-2 text-center"
-          variants={wordVariant}
-        >
-          {word}
-        </motion.span>
-      ))}
+      {words.map((word: any, index: any) => {
+        if (word === " ") {
+          return <span key={index}>&nbsp;</span>;
+        }
+        return (
+          <motion.span
+            key={index}
+            className="flex italic text-center space-x-32"
+            variants={wordVariant}
+          >
+            {word}
+          </motion.span>
+        );
+      })}
     </motion.div>
   );
 };
