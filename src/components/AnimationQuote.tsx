@@ -39,7 +39,7 @@ const AnimationQuote = ({ text }: any) => {
         return (
           <motion.span
             key={index}
-            className="flex italic text-center space-x-32"
+            className="flex italic text-center"
             variants={wordVariant}
           >
             {word}

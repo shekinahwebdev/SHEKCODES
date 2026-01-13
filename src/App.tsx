@@ -36,7 +36,7 @@ const App = () => {
               initial={{ opacity: 0, y: -80 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="w-full flex flex-col justify-center items-center z-0 relative"
+              className="w-full flex flex-col justify-center z-0 relative"
             >
               <main>
                 <Snowfall

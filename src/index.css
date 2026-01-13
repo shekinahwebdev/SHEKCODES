@@ -36,9 +36,13 @@ body {
   .font-header-style {
     font-family: "JetBrains Mono", monospace;
   }
-  .hero-3d-layout {
+  /* .hero-3d-layout {
     @apply w-full max-w-[700px] aspect-[16/12] sm:aspect-[16/10] lg:aspect-[10/9]
            flex items-center justify-center;
+  } */
+  .hero-3d-layout {
+    @apply w-full max-w-[450px] aspect-[16/12] sm:aspect-[16/10] lg:aspect-[10/9]
+           flex items-center justify-center min-h-[320px] md:min-h-[380px] lg:min-h-[420px];
   }
 }
 
@@ -177,4 +181,58 @@ body {
   100% {
     background-position: -200% center;
   }
+}
+
+.glow-wrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.glow-arc {
+  position: absolute;
+  width: 140%;
+  height: 60%;
+  left: 50%;
+  bottom: -35%;
+  transform: translateX(-50%);
+
+  background: radial-gradient(
+    ellipse at center,
+    #00003280 0%,
+    hsla(240, 73%, 43%, 0.787) 35%,
+    rgba(70, 50, 200, 0.3) 55%,
+    rgba(20, 10, 40, 0.05) 70%,
+    transparent 80%
+  );
+
+  filter: blur(60px);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(5, 5, 10, 0.4) 60%,
+    rgba(5, 5, 10, 1) 90%
+  );
+  pointer-events: none;
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.glow-arc {
+  animation: glowPulse 6s ease-in-out infinite;
 }
