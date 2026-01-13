@@ -21,7 +21,8 @@ const desAnimation = {
 };
 const Home = () => {
   const [currentWord, setCurrentWord] = useState(words[0]);
-
+  const quote =
+    "We create digital experiences that don’t just exist on the screen, but live in motion and meaning.";
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentWord((prev) => {
@@ -85,6 +86,7 @@ const Home = () => {
           <Button className=" border-semi-opaque-blue py-6 px-5 bg-linear-to-t from-semi-opaque-blue to-very-dark my-5 border-2">
             Need a site?
           </Button>
+          <AnimationQuote text={quote} />
         </div>
         <div className="glow-wrapper">
           <div className="glow-arc"></div>
