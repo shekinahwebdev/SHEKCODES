@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import AnimationQuote from "@/components/AnimationQuote";
 import HeroExperience from "@/components/Models/HeroExperience";
+
 const words = [
   "Creativity",
   "Innovation",
@@ -18,11 +19,13 @@ const desAnimation = {
   backgroundClip: "text",
   color: "transparent",
 };
-const quote =
-  "Great experiences are not simply designed,they are carefully imagined, thoughtfully built, and continuously refined with purpose,empathy, and attention to the smallest details.";
 const Home = () => {
   const [currentWord, setCurrentWord] = useState(words[0]);
-
+  const quote1 =
+    "We create digital experiences that don’t just exist on the screen, but live in motion and meaning.";
+  const quote2 =
+    "We design experiences that move smoothly, intelligently, and with purpose.";
+  const quote3 = "Refined. Responsive. Remarkable!";
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentWord((prev) => {
@@ -33,12 +36,12 @@ const Home = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <section className="px-3 md:px-5">
-      <header className="py-6 md:py-7 flex flex-col">
-        <div className="relative flex flex-col lg:flex-row items-center gap-6 lg:gap-12">
-          <div className="overflow-hidden max-w-3xl md:max-w-5xl py-2 flex-col items-center lg:py-4 px-3">
+    <section className="">
+      <header className="py-6 md:py-7 flex flex-col relative">
+        <div className="relative flex flex-col lg:flex-row items-center lg:items-start gap-6 lg:gap-12">
+          <div className="w-full lg:w-1/2 max-w-3xl md:max-w-7xl py-2 flex flex-col lg:px-10 lg:py-4 px-3">
             <h1 className="text-md md:text-xl leading-relaxed max-w-3xl">
-              <div className="relative md:h-15 lg:h-14 h-10 overflow-hidden">
+              <div className="relative min-h-14 md:min-h-18 lg:min-h-20 overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.span
                     key={currentWord}
@@ -74,7 +77,7 @@ const Home = () => {
             </div>
           </figure>
         </div>
-        <div className="max-w-3xl w-full space-y-4 text-center lg:text-left my-8">
+        <div className="max-w-3xl px-3 w-full space-y-4 text-center lg:text-left my-8">
           <h1 className="text-2xl md:text-2xl font-bold leading-tight">
             Hello, I'm Patricia,
           </h1>
@@ -82,13 +85,21 @@ const Home = () => {
             Frontend Developer
           </h1>
         </div>
-        <div className="lg:max-w-7xl w-full flex flex-col justify-center items-center text-white my-2 lg:px-3">
-          <AnimationQuote text={quote} />
+        <div className="lg:max-w-7xl text-center w-full flex flex-col justify-center items-center text-white my-2 lg:px-3 pb-45">
           <Button className=" border-semi-opaque-blue py-6 px-5 bg-linear-to-t from-semi-opaque-blue to-very-dark my-5 border-2">
             Need a site?
           </Button>
+          <AnimationQuote text={quote1} />
+          <AnimationQuote text={quote2} />
+          <AnimationQuote text={quote3} />
+        </div>
+        <div className="glow-wrapper">
+          <div className="glow-arc"></div>
         </div>
       </header>
+      <section className="latest_projects">
+        <h1>Hello</h1>
+      </section>
     </section>
   );
 };
