@@ -17,11 +17,20 @@ const Header = () => {
 
   return (
     <header className="border-b-2 border-semi-opaque-blue relative top-0 w-full px-3 py-4 md:px-10 lg:px-20 flex md:flex-row flex-col justify-between items-center">
-      <div className="mt-4 md:mt-0">
-        <div></div>
-        <p className="text-2xl">ShekCodes</p>
+      <div className="flex items-center">
+        <img
+          src="/assets/logo.png"
+          alt="ShekCode logo"
+          className="
+      w-28
+      sm:w-32
+      md:w-36
+      lg:w-40
+      h-auto
+      object-contain
+    "
+        />
       </div>
-
       <nav className="hidden lg:flex items-center justify-items">
         <ul className="flex gap-20 text-text font-thin">
           {navigationLinks.map((link) => (
