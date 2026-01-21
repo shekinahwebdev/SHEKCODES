@@ -37,7 +37,7 @@ const Home = () => {
   }, []);
   return (
     <section className="">
-      <header className="py-6 md:py-7 flex flex-col relative">
+      <header className="py-6 md:py-7 flex flex-col relative overflow-hidden">
         <div className="relative flex flex-col lg:flex-row items-center lg:items-start gap-6 lg:gap-12">
           <div className="w-full lg:w-1/2 max-w-3xl md:max-w-7xl py-2 flex flex-col lg:px-10 lg:py-4 px-3">
             <h1 className="text-md md:text-xl leading-relaxed max-w-3xl">
@@ -85,10 +85,7 @@ const Home = () => {
             Frontend Developer
           </h1>
         </div>
-        <div className="lg:max-w-7xl text-center w-full flex flex-col justify-center items-center text-white my-2 lg:px-3 pb-45">
-          <Button className=" border-semi-opaque-blue py-6 px-5 bg-linear-to-t from-semi-opaque-blue to-very-dark my-5 border-2">
-            Need a site?
-          </Button>
+        <div className="lg:max-w-7xl max-w-4xl text-center w-full flex flex-col justify-center items-center text-white my-2 lg:px-3 pb-45">
           <AnimationQuote text={quote1} />
           <AnimationQuote text={quote2} />
           <AnimationQuote text={quote3} />
@@ -96,9 +93,23 @@ const Home = () => {
         <div className="glow-wrapper">
           <div className="glow-arc"></div>
         </div>
+        <div className="header-blend" />
       </header>
-      <section className="latest_projects">
-        <h1>Hello</h1>
+      <section className="flex flex-col items-center justify-center h-[50vh]">
+        <Button className=" border-semi-opaque-blue py-6 px-5 bg-linear-to-t from-semi-opaque-blue to-very-dark my-5 border-2">
+          Need a site?
+        </Button>
+
+        <div className="flex items-center px-10">
+          <p className="text-xl text-center max-w-5xl">
+            Built on creativity, collaboration, and top excellence, SYNC is a
+            dynamic team of industry experts committed to achieving exceptional
+            great results...
+          </p>
+        </div>
+        <Button className=" border-semi-opaque-blue py-6 px-5 bg-linear-to-t from-semi-opaque-blue to-very-dark my-5 border-2">
+          Need a site?
+        </Button>
       </section>
     </section>
   );
