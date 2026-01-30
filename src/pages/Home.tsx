@@ -5,6 +5,11 @@ import AnimationQuote from "@/components/AnimationQuote";
 import HeroExperience from "@/components/Models/HeroExperience";
 import { BiFingerprint } from "react-icons/bi";
 import FloatingCardsHero from "@/components/FloatingCards";
+import ExperienceSection from "@/components/MyExperience";
+import TechStack from "@/components/TechStack";
+import ScrollRevealText from "@/components/ScrollRevealText";
+import { Link } from "react-router-dom";
+import AIToolGrid from "@/components/AiTools";
 
 const words = [
   "Creativity",
@@ -38,87 +43,103 @@ const Home = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <section className="min-h-full">
-      <header className="py-6 md:py-7 flex flex-col relative overflow-hidden">
-        <div className="relative flex flex-col lg:flex-row items-center lg:items-start gap-6 lg:gap-12">
-          <div className="w-full lg:w-1/2 max-w-3xl md:max-w-7xl py-2 flex flex-col lg:px-10 lg:py-4 px-3">
-            <h1 className="text-md md:text-xl leading-relaxed max-w-3xl">
-              <div className="relative min-h-14 md:min-h-18 lg:min-h-20 overflow-hidden">
-                <AnimatePresence mode="wait">
-                  <motion.span
-                    key={currentWord}
-                    initial={{ y: "200%", opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    exit={{ y: "-200%", opacity: 0 }}
-                    transition={{
-                      duration: 0.8,
-                      ease: [0.4, 0, 0.2, 1],
-                    }}
-                    className="absolute left-0 font-extrabold text-semi-opaque-blue text-3xl md:text-5xl"
-                  >
-                    {currentWord}:
-                  </motion.span>
-                </AnimatePresence>
-              </div>
-              <span
-                style={desAnimation}
-                className="text-[15px] md:text-[18px] font-medium"
-              >
-                is more than colors and code, it's the art of thinking deeply,
-                exploring ideas from multiple perspectives, solving problems
-                elegantly, and designing digital experiences that not only work
-                but truly resonate with people. Every project is a journey where
-                imagination meets logic, and attention to detail transforms
-                ideas into intuitive interfaces.
-              </span>
-            </h1>
-          </div>
-          <figure className="w-full lg:w-1/2 flex justify-center">
-            <div className="hero-3d-layout">
-              <HeroExperience />
-            </div>
-          </figure>
-        </div>
-        <div className="max-w-3xl px-3 w-full space-y-4 text-center lg:text-left my-8">
-          <h1 className="text-2xl md:text-2xl font-bold leading-tight">
-            Hello, I'm Patricia,
-          </h1>
-          <h1 className="font-header-style lg:text-left mb-5 font-extrabold text-3xl md:text-4xl lg:text-6xl">
-            Frontend Developer
-          </h1>
-        </div>
-        <div className="w-full text-center flex flex-col justify-center items-center text-white my-2 lg:px-3 pb-45">
-          <AnimationQuote text={quote1} />
-          <AnimationQuote text={quote2} />
-          <AnimationQuote text={quote3} />
-        </div>
-        <div className="glow-wrapper">
+    <section className="min-h-screen">
+      <header className="relative min-h-screen flex flex-col justify-center py-12 md:py-20 overflow-hidden bg-ui-background">
+        <div className="glow-wrapper opacity-50 pointer-events-none">
           <div className="glow-arc"></div>
         </div>
-        <div className="header-blend" />
-      </header>
-      <section className="flex flex-col items-center justify-center h-[60vh] border-t-2 border-b-2 border-semi-opaque-very-dark-blue">
-        <div className="relative">
-          <Button className="relative border border-semi-opaque-very-dark-blue py-6 bg-linear-to-t rounded-full from-semi-opaque-blue via-transparent to-ui-background my-5">
-            <div className="flex items-center justify-center p-2 bg-ui-background rounded-full border-semi-opaque-very-dark-blue border">
-              <BiFingerprint size={90} />
+
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-7 space-y-10">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                className="space-y-2"
+              >
+                <h2 className="text-xl md:text-2xl font-medium text-blue-400 font-mono">
+                  Hello, I'm Patricia
+                </h2>
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-white">
+                  Jnr Frontend Developer
+                </h1>
+              </motion.div>
+
+              <div className="max-w-2xl">
+                <div className="relative h-12 md:h-16 overflow-hidden mb-4">
+                  <AnimatePresence mode="wait">
+                    <motion.span
+                      key={currentWord}
+                      initial={{ y: "100%", opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      exit={{ y: "-100%", opacity: 0 }}
+                      transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
+                      className="absolute left-0 font-bold text-semi-opaque-blue text-3xl md:text-4xl uppercase tracking-widest"
+                    >
+                      {currentWord}:
+                    </motion.span>
+                  </AnimatePresence>
+                </div>
+
+                <motion.p
+                  style={desAnimation}
+                  className="text-gray-400 text-lg md:text-xl leading-relaxed font-light border-l-2 border-white/10 pl-6"
+                >
+                  is more than colors and code. It's the art of thinking deeply,
+                  solving problems elegantly, and designing digital experiences
+                  that truly resonate with people.
+                </motion.p>
+              </div>
             </div>
-            <p> About Me</p>
-          </Button>
+
+            <motion.figure
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1 }}
+              className="lg:col-span-5 flex justify-center lg:justify-end"
+            >
+              <div className="hero-3d-layout relative group">
+                <div className="absolute inset-0 bg-blue-500/20 blur-[100px] rounded-full group-hover:bg-blue-500/30 transition-colors" />
+                <HeroExperience />
+              </div>
+            </motion.figure>
+          </div>
+
+          <div className="mt-24 w-full border-t border-white/5 pt-10">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-6 opacity-60">
+              <AnimationQuote text={quote1} />
+              <div className="hidden md:block w-px h-4 bg-white/20" />
+              <AnimationQuote text={quote2} />
+              <div className="hidden md:block w-px h-4 bg-white/20" />
+              <AnimationQuote text={quote3} />
+            </div>
+          </div>
         </div>
 
-        <div className="flex items-center px-10 my-5">
-          <p className="lg:text-4xl text-2xl text-center w-full max-w-272.5 leading-[1.2]">
-            Built on creativity, collaboration, and top excellence, SYNC is a
-            dynamic team of industry experts committed to achieving exceptional
-            great results...
-          </p>
+        <div className="header-blend absolute bottom-0 left-0 w-full h-32 bg-linear-to-t from-ui-background to-transparent" />
+      </header>
+      <section className="flex pt-5 flex-col items-center justify-center h-[70vh] border-t-2 border-b-2 border-semi-opaque-very-dark-blue">
+        <div className="relative">
+          <Link to="/about">
+            <Button className="relative border border-semi-opaque-very-dark-blue py-6 bg-linear-to-t rounded-full from-semi-opaque-blue via-transparent to-ui-background my-5">
+              <div className="flex items-center justify-center p-2 bg-ui-background rounded-full border-semi-opaque-very-dark-blue border">
+                <BiFingerprint size={90} />
+              </div>
+              <p> About Me</p>
+            </Button>
+          </Link>
         </div>
-        <Button className=" border-semi-opaque-blue py-6 px-5 bg-linear-to-t from-semi-opaque-blue to-very-dark my-5 border-2">
-          Book an appointment?
-        </Button>
+        <ScrollRevealText />
+        <Link to="/contact">
+          <Button className=" border-semi-opaque-blue py-6 px-5 bg-linear-to-t from-semi-opaque-blue to-very-dark my-5 border-2">
+            Book an appointment
+          </Button>
+        </Link>
       </section>
       <FloatingCardsHero />
+      <ExperienceSection />
+      <TechStack />
+      <AIToolGrid />
     </section>
   );
 };

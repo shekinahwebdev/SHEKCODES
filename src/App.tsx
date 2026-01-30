@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import WelcomePage from "./pages/WelcomePage";
 import { AnimatePresence, motion } from "framer-motion";
 import Snowfall from "react-snowfall";
+import PortfolioFooter from "./components/layout/Footer";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -55,6 +56,7 @@ const App = () => {
                 <Outlet />
               </main>
             </motion.div>
+            <PortfolioFooter />
           </>
         )}
       </AnimatePresence>
