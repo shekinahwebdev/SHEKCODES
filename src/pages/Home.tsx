@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import AnimationQuote from "@/components/AnimationQuote";
 import HeroExperience from "@/components/Models/HeroExperience";
+import { BiFingerprint } from "react-icons/bi";
+import FloatingCardsHero from "@/components/FloatingCards";
 
 const words = [
   "Creativity",
@@ -36,7 +38,7 @@ const Home = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <section className="">
+    <section className="min-h-full">
       <header className="py-6 md:py-7 flex flex-col relative overflow-hidden">
         <div className="relative flex flex-col lg:flex-row items-center lg:items-start gap-6 lg:gap-12">
           <div className="w-full lg:w-1/2 max-w-3xl md:max-w-7xl py-2 flex flex-col lg:px-10 lg:py-4 px-3">
@@ -85,7 +87,7 @@ const Home = () => {
             Frontend Developer
           </h1>
         </div>
-        <div className="lg:max-w-7xl max-w-4xl text-center w-full flex flex-col justify-center items-center text-white my-2 lg:px-3 pb-45">
+        <div className="w-full text-center flex flex-col justify-center items-center text-white my-2 lg:px-3 pb-45">
           <AnimationQuote text={quote1} />
           <AnimationQuote text={quote2} />
           <AnimationQuote text={quote3} />
@@ -95,22 +97,28 @@ const Home = () => {
         </div>
         <div className="header-blend" />
       </header>
-      <section className="flex flex-col items-center justify-center h-[50vh]">
-        <Button className=" border-semi-opaque-blue py-6 px-5 bg-linear-to-t from-semi-opaque-blue to-very-dark my-5 border-2">
-          Need a site?
-        </Button>
+      <section className="flex flex-col items-center justify-center h-[60vh] border-t-2 border-b-2 border-semi-opaque-very-dark-blue">
+        <div className="relative">
+          <Button className="relative border border-semi-opaque-very-dark-blue py-6 bg-linear-to-t rounded-full from-semi-opaque-blue via-transparent to-ui-background my-5">
+            <div className="flex items-center justify-center p-2 bg-ui-background rounded-full border-semi-opaque-very-dark-blue border">
+              <BiFingerprint size={90} />
+            </div>
+            <p> About Me</p>
+          </Button>
+        </div>
 
-        <div className="flex items-center px-10">
-          <p className="text-xl text-center max-w-5xl">
+        <div className="flex items-center px-10 my-5">
+          <p className="lg:text-4xl text-2xl text-center w-full max-w-272.5 leading-[1.2]">
             Built on creativity, collaboration, and top excellence, SYNC is a
             dynamic team of industry experts committed to achieving exceptional
             great results...
           </p>
         </div>
         <Button className=" border-semi-opaque-blue py-6 px-5 bg-linear-to-t from-semi-opaque-blue to-very-dark my-5 border-2">
-          Need a site?
+          Book an appointment?
         </Button>
       </section>
+      <FloatingCardsHero />
     </section>
   );
 };
