@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&family=Saira:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&family=Saira:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap"); */
 
 @theme {
   --color-very-dark: #00000a;
@@ -15,6 +15,7 @@ body {
   font-size: 16px;
   color: #ffffff;
   font-family: "Inter", sans-serif;
+  /* background-color: rgba(20, 50, 150, 0.8); */
 }
 
 * {
@@ -47,6 +48,59 @@ body {
   width: 100% !important;
   height: 100% !important;
   display: block;
+}
+
+/* Floating Cards Styles */
+.floating-card {
+  animation: orbit var(--duration, 30s) linear infinite;
+  transform-origin: center;
+}
+
+@keyframes orbit {
+  0% {
+    transform: translate(-50%, -50%) rotate(var(--start-angle, 0deg))
+      translateX(var(--orbit-radius, 500px))
+      rotate(calc(-1 * var(--start-angle, 0deg)));
+  }
+  100% {
+    transform: translate(-50%, -50%)
+      rotate(calc(var(--start-angle, 0deg) + 360deg))
+      translateX(var(--orbit-radius, 500px))
+      rotate(calc(-1 * (var(--start-angle, 0deg) + 360deg)));
+  }
+}
+
+.card-inner {
+  animation: tilt 8s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+@keyframes tilt {
+  0%,
+  100% {
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1);
+  }
+  25% {
+    transform: perspective(1000px) rotateX(10deg) rotateY(-10deg) scale(1.05);
+  }
+  50% {
+    transform: perspective(1000px) rotateX(-8deg) rotateY(12deg) scale(0.98);
+  }
+  75% {
+    transform: perspective(1000px) rotateX(12deg) rotateY(8deg) scale(1.03);
+  }
+}
+
+.floating-card img {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+/* Mobile optimization for floating cards */
+@media (max-width: 640px) {
+  .card-inner {
+    animation-duration: 10s;
+  }
 }
 
 .get-started-button::before {
@@ -252,4 +306,18 @@ body {
 
   pointer-events: none;
   z-index: 8;
+}
+
+@keyframes bounce-x {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+}
+
+.animate-bounce-x {
+  animation: bounce-x 1.2s infinite ease-in-out;
 }
