@@ -9,7 +9,7 @@ export default function AboutPage() {
   const stats = [
     {
       label: "Years Experience",
-      value: "1+",
+      value: "2+",
       icon: <HiOutlineCake className="text-semi-opaque-blue" />,
     },
     {
