@@ -176,7 +176,7 @@ export default function ProjectDetailModal({
 
         <motion.div
           layoutId={`project-${project.title}`}
-          className="relative w-full max-w-5xl max-h-[90vh] overflow-y-auto bg-ui-background border border-white/10 rounded-[2.5rem] shadow-2xl no-scrollbar"
+          className="relative w-full max-w-5xl mt-28 max-h-[90vh] overflow-y-auto bg-ui-background border border-white/10 rounded-[2.5rem] shadow-2xl no-scrollbar"
         >
           <button
             onClick={onClose}
