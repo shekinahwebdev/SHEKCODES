@@ -12,19 +12,17 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-very-dark text-white pt-32 pb-20 px-6 relative overflow-hidden">
-      {/* Dynamic Background Glows */}
-      <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-blue-600/10 blur-[120px] rounded-full" />
-      <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-purple-600/10 blur-[120px] rounded-full" />
+      <div className="absolute top-[-10%] right-[-10%] w-125 h-125 bg-blue-600/10 blur-[120px] rounded-full" />
+      <div className="absolute bottom-[-10%] left-[-10%] w-125 h-125 bg-purple-600/10 blur-[120px] rounded-full" />
 
       <div className="max-w-5xl mx-auto relative z-10">
-        {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="mb-16 text-center"
         >
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-4">
-            LET'S <span className="text-blue-500 italic">SYNC.</span>
+            LET'S <span className="text-semi-opaque-blue italic">SYNC.</span>
           </h1>
           <p className="text-gray-400 text-lg md:text-xl font-light">
             Have a grand idea? Let’s turn it into high-performance code.
@@ -32,26 +30,25 @@ export default function ContactPage() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Contact Methods - The "Quick Connect" Grid */}
           <div className="lg:col-span-1 space-y-4">
             {[
               {
                 label: "Email",
                 val: "patriciashilohkanneh12@gmail.com",
                 icon: <HiOutlineMail />,
-                color: "text-blue-400",
+                color: "text-semi-opaque-blue",
               },
               {
                 label: "Current Location",
                 val: "Accra, Ghana",
                 icon: <HiOutlineLocationMarker />,
-                color: "text-purple-400",
+                color: "text-purple-800",
               },
               {
                 label: "Availability",
                 val: "Freelance / Jnr Frontend Dev",
                 icon: <HiOutlineChatAlt2 />,
-                color: "text-green-400",
+                color: "text-green-600",
               },
             ].map((item, i) => (
               <motion.div
@@ -75,7 +72,6 @@ export default function ContactPage() {
             ))}
           </div>
 
-          {/* The "Glass-Input" Form */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -100,7 +96,7 @@ export default function ContactPage() {
                     className="w-full bg-transparent border-b border-white/20 py-3 focus:border-blue-500 outline-none transition-all placeholder:text-white/10"
                   />
                 </div>
-                {/* Email Input */}
+
                 <div className="relative">
                   <label
                     className={`text-xs uppercase tracking-widest transition-colors ${
@@ -119,7 +115,6 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Subject Select (Differentiator) */}
               <div className="relative">
                 <label className="text-xs uppercase tracking-widest text-gray-500">
                   I'm interested in...
@@ -139,7 +134,6 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Message Input */}
               <div className="relative">
                 <label
                   className={`text-xs uppercase tracking-widest transition-colors ${
@@ -157,7 +151,6 @@ export default function ContactPage() {
                 />
               </div>
 
-              {/* Submit Button */}
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
