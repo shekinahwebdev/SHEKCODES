@@ -1,3 +1,4 @@
+import ResumeSection from "@/components/Resume";
 import { motion } from "framer-motion";
 import {
   HiOutlineLightBulb,
@@ -130,6 +131,8 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
+
+      <ResumeSection />
     </div>
   );
 }

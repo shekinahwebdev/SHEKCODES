@@ -25,7 +25,7 @@ export default function PortfolioFooter() {
     {
       name: "Instagram",
       icon: <SiInstagram />,
-      url: "https://instagram.com/shekinah_19",
+      url: "https://instagram.com/patriciashilohkanneh12",
       color: "hover:bg-[#E4405F] hover:text-white",
     },
   ];

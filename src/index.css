@@ -22,6 +22,36 @@ body {
   transition: all 0.3s ease;
 }
 
+/* Custom scrollbar */
+/* Width of the entire scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Background (track) */
+::-webkit-scrollbar-track {
+  background: #00000a;
+  border-radius: 8px;
+}
+
+/* Scroll thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #143296cc 0%, #00003280 100%);
+  border-radius: 4px;
+}
+
+/* Scroll thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #00003280 0%, #143296cc 100%);
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 @layer components {
   button {
     @apply cursor-pointer;
