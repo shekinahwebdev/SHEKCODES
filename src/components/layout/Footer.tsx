@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { SiGithub, SiLinkedin, SiX, SiInstagram } from "react-icons/si";
+import { SiGithub, SiLinkedin, SiInstagram } from "react-icons/si";
 import { HiOutlineMail, HiOutlinePhone } from "react-icons/hi";
 
 export default function PortfolioFooter() {
@@ -16,12 +16,12 @@ export default function PortfolioFooter() {
       url: "https://linkedin.com/in/patricia-kanneh-20a200293/",
       color: "hover:bg-[#0077B5] hover:text-white",
     },
-    {
-      name: "Twitter",
-      icon: <SiX />,
-      url: "https://twitter.com/shekinah",
-      color: "hover:bg-white hover:text-black",
-    },
+    // {
+    //   name: "Twitter",
+    //   icon: <SiX />,
+    //   url: "https://twitter.com/shekinah",
+    //   color: "hover:bg-white hover:text-black",
+    // },
     {
       name: "Instagram",
       icon: <SiInstagram />,
