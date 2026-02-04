@@ -61,7 +61,7 @@ const Home = () => {
                   Hello, I'm Patricia
                 </h2>
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-white">
-                  Jnr Frontend Developer
+                  Frontend Developer
                 </h1>
               </motion.div>
 
