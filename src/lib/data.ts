@@ -22,14 +22,6 @@ export const portfolioData = [
     img: "/assets/portfolio/image8.png",
     link: "https://google-gemini-chatbot-rtge.vercel.app/",
   },
-  // { img: "/assets/portfolio/image1.png", link: "https://project1.com" },
-  // { img: "/assets/portfolio/image1.png", link: "https://project1.com" },
-  // { img: "/assets/portfolio/image1.png", link: "https://project1.com" },
-  // { img: "/assets/portfolio/image1.png", link: "https://project1.com" },
-  // { img: "/assets/portfolio/image1.png", link: "https://project1.com" },
-  // { img: "/assets/portfolio/image1.png", link: "https://project1.com" },
-  // { img: "/assets/portfolio/image1.png", link: "https://project1.com" },
-  // { img: "/assets/portfolio/image1.png", link: "https://project1.com" },
 ];
 
 export const projects = [
@@ -225,5 +217,4 @@ export const aiTools = [
     desc: "Shifting from design to code in seconds using generative UI.",
     icon: "🎨",
   },
-  // Add more...
 ];
