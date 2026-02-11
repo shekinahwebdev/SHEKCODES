@@ -22,6 +22,10 @@ export const portfolioData = [
     img: "/assets/portfolio/image8.png",
     link: "https://google-gemini-chatbot-rtge.vercel.app/",
   },
+  {
+    img: "/assets/portfolio/image9.png",
+    link: "https://github.com/shekinahwebdev/NIMBUS",
+  },
 ];
 
 export const projects = [
@@ -200,6 +204,33 @@ export const projects = [
       "Interactive UI with animations using Framer Motion",
       "Mobile-first responsive design",
       "Clean code architecture and modern tech stack",
+    ],
+  },
+  {
+    title: "Nimbus CMS",
+    category: "CMS",
+    img: "/assets/portfolio/image9.png",
+    desc: "Nimbus is a lightweight admin panel for single users, offering real-time content management with a sleek interface. Users can edit text, manage images, and update pages with ease, powered by a Firebase backend for authentication and data storage.",
+    color: "0ea5e9",
+    stack: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "React Router",
+      "Firebase",
+    ],
+    liveLink: "https://github.com/shekinahwebdev/NIMBUS",
+    sourceLink: "https://github.com/shekinahwebdev/NIMBUS",
+    features: [
+      "Secure login page with Firebase Authentication",
+      "Dashboard overview displaying key site stats",
+      "Page-based editor with sidebar navigation (Home, About, Services, Contact)",
+      "Edit text fields, upload and replace images, and update content in real-time",
+      "Save & Publish button to instantly update site content",
+      "Simple, intuitive sidebar navigation",
+      "Responsive and mobile-friendly design",
+      "Smooth animations using Framer Motion",
     ],
   },
 ];
