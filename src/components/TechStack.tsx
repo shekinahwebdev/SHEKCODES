@@ -88,7 +88,6 @@ const TechStack = () => {
               key={i}
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
               style={{
-                // Adjust translateX based on container size
                 transform: `rotate(${
                   i * (360 / toolStack.length)
                 }deg) translateX(${240}px) rotate(-${
@@ -107,7 +106,6 @@ const TechStack = () => {
         </motion.div>
       </div>
 
-      {/* Mobile Tip */}
       <p className="mt-12 text-xs text-gray-500 font-mono uppercase tracking-widest md:hidden">
         Core Fundamentals • Professional Tools
       </p>
