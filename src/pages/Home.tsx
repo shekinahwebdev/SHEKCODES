@@ -139,7 +139,7 @@ const Home = () => {
       <FloatingCardsHero />
       <ExperienceSection />
       <TechStack />
-      <AIToolGrid />
+      {/* <AIToolGrid /> */}
     </section>
   );
 };
