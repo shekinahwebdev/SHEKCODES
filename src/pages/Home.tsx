@@ -9,7 +9,7 @@ import ExperienceSection from "@/components/MyExperience";
 import TechStack from "@/components/TechStack";
 import ScrollRevealText from "@/components/ScrollRevealText";
 import { Link } from "react-router-dom";
-import AIToolGrid from "@/components/AiTools";
+// import AIToolGrid from "@/components/AiTools";
 
 const words = [
   "Creativity",
@@ -139,7 +139,7 @@ const Home = () => {
       <FloatingCardsHero />
       <ExperienceSection />
       <TechStack />
-      <AIToolGrid />
+      {/* <AIToolGrid /> */}
     </section>
   );
 };
