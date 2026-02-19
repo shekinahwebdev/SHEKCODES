@@ -30,7 +30,7 @@ export default function ResumeSection() {
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
                 <a
-                  href="/assets/PATRICIASHILOHKANNEH-RESUME-2.pdf"
+                  href="/assets/CopyOfPatricia_ShilohKanneh_Resume02172026-2.pdf"
                   target="_blank"
                   className="flex items-center gap-2 px-8 py-4 bg-white text-very-dark font-bold rounded-2xl hover:bg-blue-400 hover:text-white transition-all duration-300"
                 >
@@ -38,7 +38,7 @@ export default function ResumeSection() {
                   View Resume
                 </a>
                 <a
-                  href="/assets/PATRICIASHILOHKANNEH-RESUME-2.pdf"
+                  href="/assets/CopyOfPatricia_ShilohKanneh_Resume02172026-2.pdf"
                   download
                   className="flex items-center gap-2 px-8 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-2xl hover:bg-white/10 transition-all"
                 >
@@ -55,7 +55,7 @@ export default function ResumeSection() {
             >
               <div className="aspect-3/4 w-full max-w-87.5 mx-auto bg-white rounded-xl shadow-2xl overflow-hidden relative border-4 border-white/10">
                 <img
-                  src="/assets/resume-preview.png"
+                  src="/assets/image copy.png"
                   alt="Patricia's Resume Preview"
                   className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
                 />
