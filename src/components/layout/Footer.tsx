@@ -59,10 +59,10 @@ export default function PortfolioFooter() {
               className="text-semi-opaque-blue group-hover:scale-110 transition-transform"
               size={20}
             />
-            <span>patriciashilohkanneh12@example.com</span>
+            <span>patriciashilohkanneh12@gmail.com</span>
           </a>
           <a
-            href="tel:+1234567890"
+            href="tel:+233245124218"
             className="flex items-center gap-3 px-6 py-3 rounded-2xl bg-white/5 border border-white/10 text-white hover:border-blue-500/50 transition-colors group"
           >
             <HiOutlinePhone
